@@ -90,7 +90,7 @@ public class TicTacToe
         {
             return true;
         }
-        if (row + col == 2 && board[0][2] == currentPlayer && board[1][1] == currentPlayer && board[2][0] == currentPlayer) 
+        if (row + column == 2 && board[0][2] == currentPlayer && board[1][1] == currentPlayer && board[2][0] == currentPlayer) 
         {
             return true;
         }
