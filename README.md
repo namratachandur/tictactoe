@@ -1,3 +1,3 @@
 # tictactoe
 
-first repo to explore github
+First repository to explore Github
