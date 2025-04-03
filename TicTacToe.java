@@ -15,13 +15,13 @@ public class TicTacToe
             displayBoard();
             System.out.print("Player " + currentPlayer + ", enter your move (row [0-2] and column [0-2]): ");
             int row = input.nextInt();
-            int col = input.nextInt();
+            int column = input.nextInt();
 
-            if (isValidMove(row, col)) 
+            if (isValidMove(row, column)) 
             {
-                board[row][col] = currentPlayer;
+                board[row][column] = currentPlayer;
 
-                if (checkWin(row, col)) 
+                if (checkWin(row, column)) 
                 {
                     displayBoard();
                     System.out.println("Player " + currentPlayer + " wins!");
@@ -35,7 +35,7 @@ public class TicTacToe
                 } 
                 else 
                 {
-                    currentPlayer = (currentPlayer == 'X') ? 'O' : 'X'; // Switch players
+                    currentPlayer = (currentPlayer == 'X') ? 'O' : 'X';
                 }
             } 
             else 
@@ -71,22 +71,22 @@ public class TicTacToe
         }
     }
 
-    private static boolean isValidMove(int row, int col) 
+    private static boolean isValidMove(int row, int column) 
     {
-        return row >= 0 && row < 3 && col >= 0 && col < 3 && board[row][col] == ' ';
+        return row >= 0 && row < 3 && column >= 0 && column < 3 && board[row][column] == ' ';
     }
 
-    private static boolean checkWin(int row, int col) 
+    private static boolean checkWin(int row, int column) 
     {
         if (board[row][0] == currentPlayer && board[row][1] == currentPlayer && board[row][2] == currentPlayer) 
         {
             return true;
         }
-        if (board[0][col] == currentPlayer && board[1][col] == currentPlayer && board[2][col] == currentPlayer) 
+        if (board[0][column] == currentPlayer && board[1][column] == currentPlayer && board[2][column] == currentPlayer) 
         {
             return true;
         }
-        if (row == col && board[0][0] == currentPlayer && board[1][1] == currentPlayer && board[2][2] == currentPlayer) 
+        if (row == column && board[0][0] == currentPlayer && board[1][1] == currentPlayer && board[2][2] == currentPlayer) 
         {
             return true;
         }
