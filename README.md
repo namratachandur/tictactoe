@@ -1,5 +1,7 @@
 # tictactoe
 
-The code for a two-player tic-tac-toe game. Both in python and java.
+The code for a two-player tic-tac-toe game. 
+
+In Python and java.
 
 First repository to explore Github
